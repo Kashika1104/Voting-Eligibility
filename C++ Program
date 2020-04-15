@@ -1,0 +1,40 @@
+//Voting Eligibility
+#include<iostream>
+using namespace std;
+int main()
+	{
+		int age;
+		char x,name[20];
+		cout<<"Enter your name : ";
+		gets(name);
+		cout<<"\nAre you a citizen of India ?(Y/N) \n";
+		cout<<endl;
+		cin>>x;
+		if(tolower(x)=='y')
+			{
+				cout<<"\nEnter your age : ";
+				cin>>age;
+				if(age>=18)
+					{
+						cout<<"\nCongratulations! ";
+						puts(name);
+						cout<<"You are eligible to vote.\n";
+					}
+				else
+					{
+						cout<<endl;
+						puts(name);
+						cout<<"You are not eligible to vote.\n";
+					}
+			}
+		else if(tolower(x)=='n')
+			{
+				cout<<endl;
+				puts(name);
+				cout<<"You are not eligible to vote\n";
+			}
+		else
+			{
+				cout<<"\nInvalid response. \n";
+			}
+	}
